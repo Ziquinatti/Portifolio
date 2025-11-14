@@ -1,16 +1,355 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MENU</title>
+    <title>TESTE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/cubes.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/eye.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/diamond.css" media="screen" />
+
+    <script src="./js/text_type.js"></script>
+    <script src="./js/scroll_events.js"></script>
 </head>
+
+<!-- <div class="stage">
+    <figure class="ball">
+        <span class="shadow"></span>
+        <span class="iris"></span>
+    </figure>
+</div> -->
+
 <body>
-    <h1>Projetos e Testes WEB</h1>
-    <ul>
-        <li><a href="portifolio.html">Portifólio {Desatualizado}</a></li>
-        <li><a href="parallax_test.html">Teste de Parallax</a></li>
-    </ul>
+    <main>
+        <div class="custom-navbar">
+            <nav id="navbar-example3">
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#home">
+                        INÍCIO
+                    </a>
+                    <a class="nav-link" href="#projects">
+                        PROJETOS
+                    </a>
+                    <a class="nav-link" href="#about">
+                        SOBRE MIM
+                    </a>
+                    <!-- <a class="nav-link" href="#abilities">
+                        CONHECIMENTOS
+                    </a> -->
+                    <a class="nav-link" href="#contact">
+                        CONTATO
+                    </a>
+                </nav>
+            </nav>
+        </div>
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy"  tabindex="0">
+            <section id="home" class="home-section">
+                <div class="background">
+                    <div class="cube cube1 cube-large">
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                    </div>
+                    <div class="cube cube2 cube-small">
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                    </div>
+                    <div class="cube cube3 cube-small">
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                    </div>
+                    <div class="cube cube4 cube-mini">
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                    </div>
+                    <div class="cube cube5 cube-mini">
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                    </div>
+                    <div class="cube cube6 cube-mini">
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                    </div>
+                </div>
+                <div class="title">
+                    <!-- <div class="typewrite" data-period="3000" data-type='["Soluções interativas", "Paixão por programação", "Transformando ideias em jogos", "Jogos digitais e físicos"]'> -->
+                    <div class="typewrite" data-period="3000" data-type='["Teste1", "Teste2", "Teste3", "Teste4"]'>
+                        <span class="wrap"></span>
+                    </div>
+                    <a class="continue" href="#projects">
+                        <span>Projetos</span>
+                        <i class="bi bi-chevron-compact-down"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section id="projects" class="container-md projects w-75">
+                <h2 class="mb-4">PROJETOS</h2>
+                <div id="carouselProjects" class="carousel slide proj-carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./imgs/placeholder-image.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imgs/placeholder-image.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./imgs/placeholder-image.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjects"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProjects"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="proj-grid">
+                    <div class="card">
+                        <img src="./imgs/placeholder-image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PROJ 1</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/placeholder-image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PROJ 1</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/placeholder-image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PROJ 1</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/placeholder-image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PROJ 1</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/placeholder-image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PROJ 1</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/placeholder-image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PROJ 1</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/placeholder-image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PROJ 1</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./imgs/placeholder-image.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">PROJ 1</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="container-md about">
+                <div class="about-background">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <i class="bi bi-suit-diamond"></i>
+                        </div>
+                        <div class="flip-card-back">
+                            <i class="bi bi-suit-diamond-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-75">
+                    <h2>SOBRE</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt temporibus accusantium harum ab
+                        unde enim, reiciendis voluptatem nihil, voluptates dolore libero atque eveniet quas corporis a quod
+                        autem laboriosam id!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt dolore alias fugit dicta
+                        architecto dolorem earum doloremque expedita, facere similique dignissimos ipsa eveniet sapiente
+                        inventore doloribus iusto excepturi repudiandae iure.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores quia consequatur facere doloribus
+                        pariatur doloremque earum rerum voluptatibus ipsa. Molestias debitis accusamus voluptatibus
+                        similique ipsam maiores eligendi veritatis laudantium sunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique harum aliquid, corrupti, sed et
+                        nihil modi tempore quia natus error sapiente quas consectetur asperiores illum cum sequi quasi sit
+                        libero.
+                    </p>
+                </div>
+                <!-- <ul class="list-historic">
+                    <li>
+                        <div class="icon">
+                            <img class="img-fluid" src="./imgs/logo-ctism.png"/>
+                        </div>
+                        <div class="about-title">CTISM</div>
+                        <div class="date">2016 - 2018</div>
+                        <div class="what">
+                            (ESTUDANTE)
+                        </div>
+                        <div class="descr">
+                            Ensino Médio + Técnico em Informática para Internet
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img class="img-fluid" src="./imgs/logo-ufsm.png"/>
+                        </div>
+                        <div class="about-title">UFSM</div>
+                        <div class="date">2019 - 2024</div>
+                        <div class="what">
+                            (ESTUDANTE)
+                        </div>
+                        <div class="descr">
+                            Graduação em Sistemas de Informação
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <img class="img-fluid" src="./imgs/logo-ctism.png"/>
+                        </div>
+                        <div class="about-title">CTISM</div>
+                        <div class="date">2022 - ...</div>
+                        <div class="what">
+                            (TRABALHO)
+                        </div>
+                        <div class="descr">
+                            Técnico em Tecnologia da Informação
+                        </div>
+                    </li>
+                </ul> -->
+            </section>
+
+            <!-- <section id="abilities" class="container-md abilities">
+                <h2>CONHECIMENTOS</h2>
+                <div class="row">
+                    <span class="col-3"></span>
+                    <span class="col-3 line">Básico</span>
+                    <span class="col-3 line">Intermediário</span>
+                    <span class="col-3 line">Avançado</span>
+                </div>
+                <div class="ability">
+                    <div class="icon">
+                        <img class="img-fluid" src="./imgs/logo-unity.png"/>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width: 38%"></div>
+                    </div>
+                </div>
+                <div class="ability">
+                    <div class="icon">
+                        <img class="img-fluid" src="./imgs/logo-blender.png"/>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width: 30%"></div>
+                    </div>
+                </div>
+                <div class="ability">
+                    <div class="icon">
+                        <img class="img-fluid" src="./imgs/logo-csharp.png"/>
+                    </div>
+                    <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" style="width: 50%"></div>
+                    </div>
+                </div>
+            </section> -->
+
+            <section id="contact" class="container-md contact">
+                <div class="w-75">
+                    <h2>CONTATO</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt temporibus accusantium harum ab
+                        unde enim, reiciendis voluptatem nihil, voluptates dolore libero atque eveniet quas corporis a quod
+                        autem laboriosam id!
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt dolore alias fugit dicta
+                        architecto dolorem earum doloremque expedita, facere similique dignissimos ipsa eveniet sapiente
+                        inventore doloribus iusto excepturi repudiandae iure.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores quia consequatur facere doloribus
+                        pariatur doloremque earum rerum voluptatibus ipsa. Molestias debitis accusamus voluptatibus
+                        similique ipsam maiores eligendi veritatis laudantium sunt.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique harum aliquid, corrupti, sed et
+                        nihil modi tempore quia natus error sapiente quas consectetur asperiores illum cum sequi quasi sit
+                        libero.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
+
 </html>
