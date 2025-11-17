@@ -1,0 +1,317 @@
+.game-card {
+	position: relative;
+	margin: 20px;
+	width: 180px;
+	height: 270px;
+	overflow: hidden;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+	transform-origin: center top;
+	transform-style: preserve-3d;
+	transform: translateZ(0);
+	transition: .3s;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+
+	img {
+		width: 100%;
+		min-height: 100%;
+	}
+
+	.proj-type {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(1, 1, 1, .7);
+		border-radius: 0 0 0 20px;
+		padding-left: 5px;
+	}
+
+	i {
+		font-size: 2rem;
+	}
+
+	figcaption {
+		font-family: "Alegreya Sans";
+		font-weight: bold;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 20px;
+		padding-bottom: 10px;
+		font-size: 20px;
+		background: none;
+		color: white;
+		transform: translateY(100%);
+		transition: .3s;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		z-index: 10;
+		width: 200%;
+		height: 100%;
+		top: -90%;
+		left: -20px;
+		opacity: .1;
+		transform: rotate(45deg);
+		background: linear-gradient(to top, transparent, white 15%, rgba(1, 1, 1, .5));
+		transition: .3s;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: 0 8px 16px 3px rgba(0, 0, 0, .6);
+		transform: translateY(-3px) scale(1.05);
+
+		figcaption {
+			transform: none;
+		}
+
+		&::after {
+			transform: rotate(25deg);
+			top: -40%;
+			opacity: .15;
+		}
+	}
+}
+
+.glow-btns {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	/* padding: 2em 1.8em; */
+	/* border-radius: 3.9em; */
+	box-shadow:
+		-3px -10px 20px -16px hsl(144 50 100 / 10%),
+		3px 10px 20px -10px hsl(144 50 0 / 20%);
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: calc(100% - 4px);
+		height: calc(100% - 4px);
+
+		border-radius: 3.9em;
+		box-shadow:
+			-50px -102px 40px -120px hsl(144 50 50 / 100%),
+
+			-6px -40px 40px -40px hsl(144 50 100 / 10%),
+			-3px -10px 20px -16px hsl(144 50 100 / 10%),
+			6px 40px 40px -32px hsl(144 50 0 / 40%),
+			3px 10px 20px -10px hsl(144 50 0 / 20%);
+		filter: blur(2px);
+	}
+}
+
+.glow-btn {
+	--btn-inner: hsla(144deg 10% 22% / 35%);
+	--btn-outer: hsla(144deg 10% 22% / 25%);
+	--btn-glow-inner: hsla(144deg 83% 100% / 0%);
+	--btn-glow-outer: hsla(144deg 83% 100% / 0%);
+
+	--btn-reflex-bottom-1: 0%;
+	--btn-reflex-bottom-2: 0%;
+	--btn-reflex-top-1: 0%;
+	--btn-reflex-top-2: 0%;
+
+	position: relative;
+	z-index: 1;
+	background:
+	
+		radial-gradient(ellipse 140% 70% at 50% 100%,
+			hsla(144deg 100% 70% / var(--btn-reflex-bottom-1)) 0%,
+			hsla(144deg 100% 70% / var(--btn-reflex-bottom-2)) 30%,
+			hsla(144deg 100% 70% / 0%) 100%),
+
+		radial-gradient(ellipse 140% 70% at 50% 0%,
+			hsla(144deg 100% 70% / var(--btn-reflex-top-1)) 0%,
+			hsla(144deg 100% 70% / var(--btn-reflex-top-2)) 30%,
+			hsla(144deg 100% 70% / 0%) 100%),
+
+		radial-gradient(ellipse at 50% 10%,
+			var(--btn-glow-inner),
+			var(--btn-glow-outer)),
+
+		radial-gradient(var(--btn-inner), var(--btn-outer));
+	border: none;
+	font-size: 24px;
+	width: 240px;
+	height: 60px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.04em;
+	color: hsl(144 50 94 / 70%);
+	border-radius: 99em;
+	text-shadow:
+		0 -1px hsl(144 50 30 / 40%);
+	box-shadow:
+		inset 0 4px 1px -3px hsl(144 50 100 / 10%),
+		inset 0 17px 2px -16px hsl(144 100 80 / 0%),
+
+		inset 0 4px 8px 5px hsl(144 8 4 / 16%),
+		0 2px 0 1px hsl(144 8 11 / 100%),
+		0 3px 0 -1px hsl(144 50 60 / 0%),
+
+		inset 0 -1px 2px 1px hsl(144 50 100 / 0%),
+		0 1px 2px hsl(144 50 100 / 0%),
+		0 2px 0 hsl(144 100 100 / 0%),
+		0 4px 0 0 hsl(144 100 50 / 0%),
+
+		0 2px 0 3px hsl(144 50 0 / 90%),
+		0 3px 0 3px hsl(144 50 100 / 4%)
+	;
+
+	transition:
+		--btn-glow-inner 200ms,
+		--btn-inner 200ms,
+		--btn-outer 200ms,
+		--btn-reflex-bottom-1 500ms,
+		--btn-reflex-bottom-2 500ms,
+		--btn-reflex-top-1 500ms,
+		--btn-reflex-top-2 500ms,
+		box-shadow 200ms,
+		text-shadow 400ms,
+		transform 200ms;
+
+	&:hover {
+		--btn-glow-inner: hsla(144deg 83% 100% / 20%);
+		--btn-inner: hsla(144deg 50% 50% / 100%);
+		--btn-outer: hsla(144deg 83% 50% / 100%);
+
+		cursor: pointer;
+
+		color: hsl(144 50 100);
+		box-shadow:
+			inset 0 -1px 2px 1px hsl(144 50 100 / 30%),
+			inset 0 17px 2px -16px hsl(144 100 80 / 0%),
+
+			inset 0 0 24px hsl(144 50 20 / 30%),
+			0 3px 0 1px hsl(144 83 60 / 70%),
+			0 3px 0 -1px hsl(144 50 60 / 0%),
+
+			inset 0 -1px 2px 1px hsl(144 50 100 / 50%),
+			0 1px 2px hsl(144 50 100 / 80%),
+			0 2px 16px hsl(144 100 100 / 15%),
+			0 4px 32px 2px hsl(144 100 50 / 25%),
+
+			0 3px 0 3px hsl(144 50 0 / 80%),
+			0 3px 0 4px hsl(144 50 30 / 40%)
+		;
+		text-shadow:
+			0 -1px hsl(144 50 30 / 40%),
+			0 0 4px hsl(144 50 100 / 40%);
+		transform: translateY(-1px);
+
+		transition:
+			--btn-glow-inner 200ms,
+			--btn-inner 200ms,
+			--btn-outer 500ms,
+			--btn-reflex-bottom-1 500ms,
+			--btn-reflex-bottom-2 500ms,
+			--btn-reflex-top-1 500ms,
+			--btn-reflex-top-2 500ms,
+			box-shadow 200ms,
+			text-shadow 400ms,
+			transform 200ms;
+	}
+
+	&:active {
+		transform: translateY(2px);
+
+		box-shadow:
+			inset 0 -1px 2px 1px hsl(144 50 100 / 30%),
+			inset 0 17px 2px -16px hsl(144 100 80 / 0%),
+
+			inset 0 0 24px hsl(144 50 20 / 30%),
+			0 0px 0 1px hsl(144 83 60 / 70%),
+			0 1px 0 -1px hsl(144 50 60 / 0%),
+
+			inset 0 -1px 2px 1px hsl(144 50 100 / 50%),
+			0 1px 2px hsl(144 50 100 / 80%),
+			0 2px 16px hsl(144 100 100 / 20%),
+			0 4px 32px 2px hsl(144 100 50 / 30%),
+
+			0 0px 0 3px hsl(144 50 0 / 50%),
+			0 0px 1px 4px hsl(144 50 30 / 40%)
+		;
+
+		transition:
+			--btn-glow-inner 200ms,
+			--btn-inner 200ms,
+			--btn-outer 500ms,
+			--btn-reflex-bottom-1 500ms,
+			--btn-reflex-bottom-2 500ms,
+			--btn-reflex-top-1 500ms,
+			--btn-reflex-top-2 500ms,
+			box-shadow 200ms,
+			text-shadow 400ms,
+			transform 200ms;
+	}
+
+	&:has(+ .glow-btn:hover) {
+		--btn-inner: hsla(144deg 10% 22% / 35%);
+		--btn-outer: hsla(144deg 10% 22% / 25%);
+		--btn-glow-inner: hsla(144deg 83% 100% / 0%);
+		--btn-glow-outer: hsla(144deg 83% 100% / 0%);
+
+		--btn-reflex-bottom-1: 15%;
+		--btn-reflex-bottom-2: 7%;
+
+		box-shadow:
+			inset 0 4px 1px -3px hsl(144 50 100 / 5%),
+			inset 0 17px 2px -16px hsl(144 100 80 / 0%),
+
+			inset 0 4px 8px 5px hsl(144 8 4 / 12%),
+			0 2px 0 1px hsl(144 24 16 / 70%),
+			0 3px 0 -1px hsl(144 50 60 / 50%),
+
+			inset 0 -7px 2px -6px hsl(144 100 80 / 50%),
+			0 0 8px hsl(144 50 100 / 0%),
+			0 2px 2px -3px hsl(144 100 80 / 50%),
+			0 8px 8px -6px hsl(144 100 50 / 14%),
+
+			0 2px 0 3px hsl(144 50 0 / 90%),
+			0 3px 0 3px hsl(144 83 50 / 8%)
+		;
+	}
+
+	&:hover+.glow-btn {
+		--btn-inner: hsla(144deg 10% 22% / 35%);
+		--btn-outer: hsla(144deg 10% 22% / 25%);
+		--btn-glow-inner: hsla(144deg 83% 100% / 0%);
+		--btn-glow-outer: hsla(144deg 83% 100% / 0%);
+
+		--btn-reflex-top-1: 15%;
+		--btn-reflex-top-2: 7%;
+
+		box-shadow:
+			inset 0 3px 2px -3px hsl(144 100 80 / 50%),
+			inset 0 17px 2px -16px hsl(144 100 80 / 20%),
+
+			inset 0 4px 8px 5px hsl(144 8 4 / 6%),
+			0 2px 0 1px hsl(144 8 11 / 100%),
+			0 3px 0 -1px hsl(144 50 60 / 0%),
+
+			inset 0 -1px 2px 1px hsl(144 50 100 / 0%),  
+			0 1px 2px hsl(144 50 100 / 0%),
+			0 2px 0 hsl(144 100 100 / 0%),
+			0 4px 0 0 hsl(144 100 50 / 0%),
+
+			0 2px 0 3px hsl(144 50 0 / 90%),
+			0 3px 0 3px hsl(144 50 100 / 4%)
+		;
+	}
+}
